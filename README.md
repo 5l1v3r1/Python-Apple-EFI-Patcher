@@ -6,17 +6,17 @@ Place patcher.py, offsets.py, database.json and the ME_Regions folder into the s
 
 `python3 patcher.py -i <input_efi_filename> -o <output_efi_filename> -t <efi_type_#> -s <serial_to_insert> -m <me_region_filename> -r`
 
-example: `python3 patcher.py -i firmware.bin.bin -o dump.bin -t 5 -s ABCDEFGH1234 -m ME_Regions/MBA61/10.13.6_MBA61_0107_B00.rgn -r`
+__example:__ `python3 patcher.py -i firmware.bin.bin -o dump.bin -t 5 -s ABCDEFGH1234 -m ME_Regions/MBA61/10.13.6_MBA61_0107_B00.rgn -r`
 
-Note: You can drag and drop files into the terminal to avoid having to type locations.
+__Note:__ You can drag and drop files into the terminal to avoid having to type locations.
 
-Note: ME Regions are untested, and may not be useable!!!! Require real world testing. Feedback would be appreciated.
+__Note:__ ME Regions are untested, and may not be useable!!!! Require real world testing. Feedback would be appreciated.
 ME Regions have been extracted from macOS 10.12.6, 10.13.6, and 10.14.6. They are contained in the ME_Regions folder. Each subfolder corresponds to a system type. (example: MBA61 = MacBook Air 6,1). Each ME region file is named in accordance to the macOS version from which it was extracted, the system type, the Boot Rom Version and the ME Version. (example: 10.13.6_MBA61_0107_B00_9.5.3.1526.rgn, means that the ME Region was extracted from macOS High Sierra 10.13.6, it is for a MacBook Air 6,1, it came from an EFI with Boot Rom Version 0107_B00 and the ME Version is 9.5.3.1526). In some instances, regions between macOS versions may be identical. It seemed that anything extracted from .scap files rather an .fd files were the same between OS versions. You can use something like hex fiend to compare and see if they are identical. Also, anything extracted from macOS 10.14.6 had no references to Boot Rom Versions in their names. Not that it particularly matters, what you want to match up is the ME version number.
 
 Offsets for new types of EFI's can also be easily added. Just follow the format provided in the offsets.py file and append your additions. Use something like hexfiend to acquire the line position offsets for each region.
 
 
-Options:
+__Options:__
 * -i <input_efi_filename>     -- name of the file to be modified</li>
 * -o <output_efi_filename>    -- name of the newly modified file</li>
 * -t <efi_type>               -- type # of efi (see list below)</li>
@@ -24,7 +24,7 @@ Options:
 * -m <me_region_filename>     -- name of the ME Region file to insert</li>
 * -r                          -- remove firmware lock</li>
 
-EFI Type Options:
+__EFI Type Options:__
 
 1. EFI Type 1
    - 2008 A1278 820-2327
