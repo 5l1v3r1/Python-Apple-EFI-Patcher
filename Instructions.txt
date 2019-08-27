@@ -1,0 +1,45 @@
+Apple EFI Patcher Instructions:
+
+patcher.py is a python3 script that automatically patches an Apple EFI SPI Rom file. Place patcher.py, offsets.py and the rom you would like to patch into the same directory. Run as follows:
+
+Usage: python3 patcher.py -i <input_efi_filename> -o <output_efi_filename> -t <efi_type_#> -s <serial_to_insert> -m <me_region_filename> -r
+
+example: python3 patcher.py -i firmware.bin.bin -o dump.bin -t 5 -s ABCDEFGH1234 -m ME_Regions/MBA61/10.13.6_MBA61_0107_B00.rgn -r
+
+Offsets for new types of EFI's can also be easily added. Just follow the format provided in the offsets.py file and append your additions. Use something like hexfiend to acquire the line position offsets for each region.
+
+Options:
+-i <input_efi_filename>		-- name of the file to be modified
+-o <output_efi_filename>	-- name of the newly modified file
+-t <efi_type>				-- type # of efi (see list below)
+-s <serial_to_insert>		-- serial number to be inserted
+-m <me_region_filename>		-- name of the ME Region file to insert
+-r 							-- remove firmware lock
+
+EFI Type Options:
+
+1 = 2008 A1278 820-2327
+
+2 = 2011 A1278 820-2936
+    2011 A1286 820-2915
+
+3 = 2011 A1369 820-3023
+
+4 = 2012 A1278 820-3115
+    2012 A1286 820-3330
+    late 2012 / early 2013 A1398 820-3332
+    late 2012 / early 2013 A1425 820-3462
+    2012 A1465 820-3208
+    2012 A1466 820-3209
+
+5 = 2013/2014 A1502 820-3476
+    2013/2014 A1398 820-3662
+    2013/2014 A1465 820-3435
+    2013/2014 A1466 820-3437
+
+6 = 2015 A1398 820-00138
+    2015 A1465 820-00164
+    2015-2017 A1466 820-00165
+    2015 A1502 820-4924
+
+7 = 2017 A1706 820-00239
