@@ -130,7 +130,7 @@ def main(argv):
 			patch_serial = arg.upper()
 		elif opt in ("-m", "--me_region_filename"):
 			me_region_filename = arg
-		elif opt in ("-r"): #, "--remove_lock"):
+		elif opt in ("-r"):
 			remove_lock = 'yes'
 
 	#Get & Set Offset Variables from set_offsets function in offsets.py
