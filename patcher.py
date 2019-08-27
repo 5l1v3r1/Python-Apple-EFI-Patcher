@@ -19,6 +19,7 @@ def search_json_last4(json_object, hwc_code):
 		if dict['last4'] == hwc_code:
 			return dict['name']
 
+# function from MacmodelShelf - https://github.com/MagerValp/MacModelShelf
 def lookup_mac_model_code_from_apple(model_code):
 	try:
 		f = urlopen("http://support-sp.apple.com/sp/product?cc=%s&lang=en_US" % model_code, timeout=2)
