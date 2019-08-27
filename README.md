@@ -15,8 +15,9 @@ ME Regions have been extracted from macOS 10.12.6, 10.13.6, and 10.14.6. They ar
 
 Offsets for new types of EFI's can also be easily added. Just follow the format provided in the offsets.py file and append your additions. Use something like hexfiend to acquire the line position offsets for each region.
 
+<p>
 Options:
--i <input_efi_filename>     -- name of the file to be modified </br>
+-i <input_efi_filename>     -- name of the file to be modified
 -o <output_efi_filename>    -- name of the newly modified file
 -t <efi_type>               -- type # of efi (see list below)
 -s <serial_to_insert>       -- serial number to be inserted
@@ -50,3 +51,4 @@ EFI Type Options:
     2015 A1502 820-4924
 
 7 = 2017 A1706 820-00239
+</p>
