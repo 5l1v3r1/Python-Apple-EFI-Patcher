@@ -157,7 +157,6 @@ def main(argv):
 		content.close()
 
 	#Retrieve Serial Number:
-	#serial_offset = content.find(b'\x73\x73\x6E') + 4
 	serial_offset = fsys.find(b'ssn') + 5
 	serial_offset_end = serial_offset + 12
 	serial = fsys[serial_offset:serial_offset_end]
@@ -201,8 +200,6 @@ def main(argv):
 			fsys_message = 'Fsys Block Not Patched! - Size Mismatch'
 
 	else:
-		# new_patched_efi_part2 = entire_efi
-		#new_patched_efi = entire_efi
 		fsys_message = 'Fsys Block Not Patched! - Serial Length Incorrect'
 
 		
@@ -213,7 +210,6 @@ def main(argv):
 		lock_comparison = check_length(firmware_lock, lock_fill)
 
 		if(lock_comparison == True):
-			# new_patched_efi_part2 = new_patched_efi_part2.replace(firmware_lock, binascii.unhexlify(fill))
 			write_lock = True
 			lock_message = 'Firmware Lock Successfully Removed!'
 		elif(lock_comparison == False):
