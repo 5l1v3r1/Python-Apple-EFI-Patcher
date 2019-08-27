@@ -17,14 +17,13 @@ Offsets for new types of EFI's can also be easily added. Just follow the format 
 
 
 Options:
-<li>
--i <input_efi_filename>     -- name of the file to be modified
--o <output_efi_filename>    -- name of the newly modified file
--t <efi_type>               -- type # of efi (see list below)
--s <serial_to_insert>       -- serial number to be inserted
--m <me_region_filename>     -- name of the ME Region file to insert
--r                          -- remove firmware lock
-</li>
+<li>-i <input_efi_filename>     -- name of the file to be modified</li>
+<li>-o <output_efi_filename>    -- name of the newly modified file</li>
+<li>-t <efi_type>               -- type # of efi (see list below)</li>
+<li>-s <serial_to_insert>       -- serial number to be inserted</li>
+<li>-m <me_region_filename>     -- name of the ME Region file to insert</li>
+<li>-r                          -- remove firmware lock</li>
+
 EFI Type Options:
 
 1 = 2008 A1278 820-2327
@@ -52,4 +51,4 @@ EFI Type Options:
     2015 A1502 820-4924
 
 7 = 2017 A1706 820-00239
-</p>
+
