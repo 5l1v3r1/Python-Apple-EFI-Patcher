@@ -17,38 +17,37 @@ Offsets for new types of EFI's can also be easily added. Just follow the format 
 
 
 Options:
-- -i <input_efi_filename>     -- name of the file to be modified</li>
-- -o <output_efi_filename>    -- name of the newly modified file</li>
-- -t <efi_type>               -- type # of efi (see list below)</li>
-- -s <serial_to_insert>       -- serial number to be inserted</li>
-- -m <me_region_filename>     -- name of the ME Region file to insert</li>
-- -r                          -- remove firmware lock</li>
+* -i <input_efi_filename>     -- name of the file to be modified</li>
+* -o <output_efi_filename>    -- name of the newly modified file</li>
+* -t <efi_type>               -- type # of efi (see list below)</li>
+* -s <serial_to_insert>       -- serial number to be inserted</li>
+* -m <me_region_filename>     -- name of the ME Region file to insert</li>
+* -r                          -- remove firmware lock</li>
 
 EFI Type Options:
 
-1 = 2008 A1278 820-2327
+1. = 2008 A1278 820-2327
 
-2 = 2011 A1278 820-2936
-    2011 A1286 820-2915
+2. = 2011 A1278 820-2936
+   - 2011 A1286 820-2915
 
-3 = 2011 A1369 820-3023
+3. = 2011 A1369 820-3023
 
-4 = 2012 A1278 820-3115
-    2012 A1286 820-3330
-    late 2012 / early 2013 A1398 820-3332
-    late 2012 / early 2013 A1425 820-3462
-    2012 A1465 820-3208
-    2012 A1466 820-3209
+4. = 2012 A1278 820-3115
+   - 2012 A1286 820-3330
+   - late 2012 / early 2013 A1398 820-3332
+   - late 2012 / early 2013 A1425 820-3462
+   - 2012 A1465 820-3208
+   - 2012 A1466 820-3209
 
-5 = 2013/2014 A1502 820-3476
-    2013/2014 A1398 820-3662
-    2013/2014 A1465 820-3435
-    2013/2014 A1466 820-3437
+5. = 2013/2014 A1502 820-3476
+   - 2013/2014 A1398 820-3662
+   - 2013/2014 A1465 820-3435
+   - 2013/2014 A1466 820-3437
 
-6 = 2015 A1398 820-00138
-    2015 A1465 820-00164
-    2015-2017 A1466 820-00165
-    2015 A1502 820-4924
+6. = 2015 A1398 820-00138
+   - 2015 A1465 820-00164
+   - 2015-2017 A1466 820-00165
+   - 2015 A1502 820-4924
 
-7 = 2017 A1706 820-00239
-
+7. = 2017 A1706 820-00239
