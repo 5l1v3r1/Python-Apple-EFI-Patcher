@@ -1,7 +1,9 @@
 # Python-Apple-EFI-Patcher
-patcher.py is a python3 script that automatically patches an Apple EFI SPI Rom file. Place patcher.py, offsets.py, database.json and the ME_Regions folder into the same directory. Run as follows:
+patcher.py is a python3 script that automatically patches an Apple EFI SPI Rom file.
 
 # Usage:
+Place patcher.py, offsets.py, database.json and the ME_Regions folder into the same directory. Run as follows:
+
 python3 patcher.py -i <input_efi_filename> -o <output_efi_filename> -t <efi_type_#> -s <serial_to_insert> -m <me_region_filename> -r
 
 example: python3 patcher.py -i firmware.bin.bin -o dump.bin -t 5 -s ABCDEFGH1234 -m ME_Regions/MBA61/10.13.6_MBA61_0107_B00.rgn -r
