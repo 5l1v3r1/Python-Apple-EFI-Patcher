@@ -157,15 +157,39 @@ def main(argv):
 		content.close()
 
 	#Retrieve Serial Number:
-	serial_offset = fsys.find(b'ssn') + 5
-	serial_offset_end = serial_offset + 12
-	serial = fsys[serial_offset:serial_offset_end]
+	serial_offset = fsys.find(b'ssn')
+	if (serial_offset == -1): # if = -1, then didn't find search term
+		serial_offset = fsys.find(b'SSN')
+		if (serial_offset == -1): # if still -1, then failed both searches
+			serial_search = False
+		else:
+			serial_search = True
+			serial_offset = serial_offset + 5
+			serial_offset_end = serial_offset + 12
+			serial = fsys[serial_offset:serial_offset_end]
+	else:
+		serial_search = True
+		serial_offset = serial_offset + 5
+		serial_offset_end = serial_offset + 12
+		serial = fsys[serial_offset:serial_offset_end]
 
 	#Retrieve Current HWC:
-	hwc_offset = fsys.find(b'hwc') + 5
-	hwc_offset_end = hwc_offset + 4
-	hwc = fsys[hwc_offset:hwc_offset_end]
-
+	hwc_offset = fsys.find(b'hwc')
+	if (hwc_offset == -1): # if = -1, then didn't find search term
+		hwc_offset = fsys.find(b'HWC')
+		if (hwc_offset == -1): # if still -1, then failed both searches
+			hwc_search = False
+		else:
+			hwc_search = True
+			hwc_offset = hwc_offset + 5
+			hwc_offset_end = hwc_offset + 4
+			hwc = fsys[hwc_offset:hwc_offset_end]
+	else:
+		hwc_search = True
+		hwc_offset = hwc_offset + 5
+		hwc_offset_end = hwc_offset + 4
+		hwc = fsys[hwc_offset:hwc_offset_end]
+	
 	#CRC32 Calculations for Original Fsys
 	calc_crc32 = hex((binascii.crc32(fsys)))
 	fixed_calc_crc32_1 = calc_crc32[-2:10]
