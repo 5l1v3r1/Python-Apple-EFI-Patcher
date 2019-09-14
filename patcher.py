@@ -119,6 +119,7 @@ def main(argv):
 			print ('    2015 A1502 820-4924')
 			print ()
 			print ('7 = 2017 A1706 820-00239')
+			print ('    2017 A1707 820-00928')
 			sys.exit()
 		elif opt in ("-i", "--ifile"):
 			inputfile = arg
