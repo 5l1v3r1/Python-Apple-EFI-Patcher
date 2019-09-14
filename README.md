@@ -55,6 +55,7 @@ __EFI Type Options:__
 
 __Note:__ ME Regions are untested! They require more real world testing. Feedback would be appreciated.
 ME Regions have been extracted from macOS 10.12.6, 10.13.6, and 10.14.6. They are contained in the ME_Regions folder. Each subfolder corresponds to a system type. (example: MBA61 = MacBook Air 6,1). Each ME region file is named in accordance to the macOS version from which it was extracted, the system type, the Boot Rom Version and the ME Version. (example: 10.13.6_MBA61_0107_B00_9.5.3.1526.rgn, means that the ME Region was extracted from macOS High Sierra 10.13.6, it is for a MacBook Air 6,1, it came from an EFI with Boot Rom Version 0107_B00 and the ME Version is 9.5.3.1526). In some instances, regions between macOS versions may be identical. It seemed that anything extracted from .scap files rather an .fd files were the same between OS versions. You can use something like hex fiend to compare and see if they are identical. Also, anything extracted from macOS 10.14.6 had no references to Boot Rom Versions in their names. Not that it particularly matters, what you want to match up is the ME version number.
+
 __Update:__ ME Region 10.14.6_MBA71_10.0.35.1012.rgn has been tested and verified working. This would stand to reason that the other extracted regions should also work as expected!
 
 Offsets for new types of EFI's can also be easily added. Just follow the format provided in the offsets.py file and append your additions. Use something like hexfiend to acquire the line position offsets for each region.
