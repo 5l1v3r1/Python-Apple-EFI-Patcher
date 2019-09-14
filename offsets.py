@@ -112,6 +112,7 @@ def set_offsets(efi_type):
 
 	# Offsets for:
 	# 2017 A1706 820-00239
+	# 2017 A1707 820-00928
 	#elif efi_type == '2017_A1706':
 	elif efi_type == '7':
 		fsys_start_offset = 1413120 # Offset = Begining of Fsys
