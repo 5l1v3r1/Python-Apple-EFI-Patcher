@@ -58,4 +58,4 @@ ME Regions have been extracted from macOS 10.12.6, 10.13.6, and 10.14.6. They ar
 
 __Update:__ ME Region 10.14.6_MBA71_10.0.35.1012.rgn has been tested and verified working. This would stand to reason that the other extracted regions should also work as expected!
 
-Offsets for new types of EFI's can also be easily added. Just follow the format provided in the offsets.py file and append your additions. Use something like hexfiend to acquire the line position offsets for each region.
+Offsets for new types of EFI's can also be easily added. Just follow the format provided in the offsets.py file and append your additions. Use something like <a href="https://ridiculousfish.com/hexfiend/">hex fiend</a> to acquire the line position offsets for each region.
