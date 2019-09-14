@@ -1,5 +1,5 @@
 # Python-Apple-EFI-Patcher
-patcher.py is a python3 script designed to automate the patching process of Apple EFI Rom dumps. The script can change the serial number, which will also automatically change the hwc field, and correct the CRC32 for the Fsys block. The script also has the ability to remove firmware locks / clear NVRAM and to Clear ME Regions. Currently, the ME Region patching process in patcher.py works correctly, but the supplied ME Regions are untested. Alterantively, you can substitute your own ME Region files if the supplied ones do not work.
+patcher.py is a python3 script designed to automate the patching process of Apple EFI Rom dumps. The script can change the serial number, which will also automatically change the hwc field, and correct the CRC32 for the Fsys block. The script also has the ability to remove firmware locks / clear NVRAM and to Clear ME Regions. Currently, the ME Region patching process in patcher.py works correctly, but the supplied ME Regions are untested. Alterantively, you can substitute your own ME Region files if desired.
 
 # Usage:
 Place patcher.py, offsets.py, database.json and the ME_Regions folder into the same directory. Run as follows:
@@ -53,7 +53,8 @@ __EFI Type Options:__
 7. EFI Type 7
    - 2017 A1706 820-00239
 
-__Note:__ ME Regions are untested, and may not be useable!!!! Require real world testing. Feedback would be appreciated.
+__Note:__ ME Regions are untested! They require more real world testing. Feedback would be appreciated.
 ME Regions have been extracted from macOS 10.12.6, 10.13.6, and 10.14.6. They are contained in the ME_Regions folder. Each subfolder corresponds to a system type. (example: MBA61 = MacBook Air 6,1). Each ME region file is named in accordance to the macOS version from which it was extracted, the system type, the Boot Rom Version and the ME Version. (example: 10.13.6_MBA61_0107_B00_9.5.3.1526.rgn, means that the ME Region was extracted from macOS High Sierra 10.13.6, it is for a MacBook Air 6,1, it came from an EFI with Boot Rom Version 0107_B00 and the ME Version is 9.5.3.1526). In some instances, regions between macOS versions may be identical. It seemed that anything extracted from .scap files rather an .fd files were the same between OS versions. You can use something like hex fiend to compare and see if they are identical. Also, anything extracted from macOS 10.14.6 had no references to Boot Rom Versions in their names. Not that it particularly matters, what you want to match up is the ME version number.
+__Update:__ ME Region 10.14.6_MBA71_10.0.35.1012.rgn has been tested and verified working. This would stand to reason that the other extracted regions should also work as expected!
 
 Offsets for new types of EFI's can also be easily added. Just follow the format provided in the offsets.py file and append your additions. Use something like hexfiend to acquire the line position offsets for each region.
