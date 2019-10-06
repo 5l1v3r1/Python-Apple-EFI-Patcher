@@ -16,12 +16,14 @@ python3 patcher.py -i firmware.bin.bin -o dump.bin -t 5 -s ABCDEFGH1234 -m ME_Re
 __Note:__ You can drag and drop files into the terminal to avoid having to type locations.
 
 __Options:__
-* -i <input_efi_filename>     -- name of the file to be modified</li>
-* -o <output_efi_filename>    -- name of the newly modified file</li>
-* -t <efi_type>               -- type # of efi (see list below)</li>
-* -s <serial_to_insert>       -- serial number to be inserted</li>
-* -m <me_region_filename>     -- name of the ME Region file to insert</li>
-* -r                          -- remove firmware lock</li>
+```
+-i <input_efi_filename>     -- name of the file to be modified</li>
+-o <output_efi_filename>    -- name of the newly modified file</li>
+-t <efi_type>               -- type # of efi (see list below)</li>
+-s <serial_to_insert>       -- serial number to be inserted</li>
+-m <me_region_filename>     -- name of the ME Region file to insert</li>
+-r                          -- remove firmware lock</li>
+```
 
 __EFI Type Options:__
 
