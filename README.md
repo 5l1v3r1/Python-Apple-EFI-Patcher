@@ -10,7 +10,7 @@ python3 patcher.py -i <input_efi_filename> -o <output_efi_filename> -t <efi_type
 
 __example:__ 
 ```
-python3 patcher.py -i firmware.bin.bin -o dump.bin -t 5 -s ABCDEFGH1234 -m ME_Regions/MBA61/10.13.6_MBA61_0107_B00.rgn -r
+python3 patcher.py -i firmware.bin -o dump.bin -t 5 -s ABCDEFGH1234 -m ME_Regions/MBA61/10.13.6_MBA61_0107_B00.rgn -r
 ```
 
 __Note:__ You can drag and drop files into the terminal to avoid having to type locations.
