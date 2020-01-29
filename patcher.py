@@ -193,7 +193,8 @@ def main(argv):
 		hwc = fsys[hwc_offset:hwc_offset_end]
 	
 	#CRC32 Calculations for Original Fsys
-	calc_crc32 = hex((binascii.crc32(fsys)))
+	calc_crc32 = hex((binascii.crc32(fsys)) & 0xffffffff)
+	#calc_crc32 = hex((binascii.crc32(fsys)))
 	fixed_calc_crc32_1 = calc_crc32[-2:10]
 	fixed_calc_crc32_2 = calc_crc32[-4:8]
 	fixed_calc_crc32_3 = calc_crc32[-6:6]
@@ -206,7 +207,8 @@ def main(argv):
 		patched_fsys_part2 = patched_fsys_part1.replace(hwc, binascii.a2b_qp(patch_hwc))
 
 		#CRC32 Calculations for Patched Fsys
-		patched_calc_crc32 = hex((binascii.crc32(patched_fsys_part2)))
+		patched_calc_crc32 = hex((binascii.crc32(patched_fsys_part2)) & 0xffffffff)
+		#patched_calc_crc32 = hex((binascii.crc32(patched_fsys_part2)))
 		fixed_patched_calc_crc32_1 = patched_calc_crc32[-2:10]
 		fixed_patched_calc_crc32_2 = patched_calc_crc32[-4:8]
 		fixed_patched_calc_crc32_3 = patched_calc_crc32[-6:6]
