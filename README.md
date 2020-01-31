@@ -1,5 +1,5 @@
 # Python-Apple-EFI-Patcher
-patcher.py is a python3 script designed to automate the patching process of Apple EFI Rom dumps. The script can change the serial number, which will also automatically change the hwc field, and correct the CRC32 for the Fsys block. The script also has the ability to remove firmware locks / clear NVRAM and to Clear ME Regions.
+patcher.py is a python3 script designed to automate the patching process of Apple EFI Rom dumps. The script can change the serial number, which will also automatically change the hwc field, and correct the CRC32 for the Fsys block. The script also has the ability to remove firmware locks and to Clear ME Regions.
 
 # Usage:
 Place patcher.py, offsets.py, database.json and the ME_Regions folder into the same directory. Run as follows:
